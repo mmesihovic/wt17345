@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Spirala 1</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/grid.css">
+	<link rel="stylesheet" type="text/css" href="../css/login.css">
+	<script src="../scripts/validacija.js"></script>
+	<script src="../scripts/poruke.js"></script>
+	<script src="../scripts/login.js"></script>
+</head>
+
+<body>
+<div class="meni">
+  <ul>
+    <li><img src="../images/logo.png" height="45" width="50" alt="Logo Missing"/></li>
+    <li><a href="login.html">Login</a></li>
+    <li><a href="statistika.html">Statistika</a></li>
+    <li><a href="unosKomentara.html">Komentari</a></li>
+  </ul>
+</div>
+<div class="row">
+	<div class="col-4"></div>
+	<div class="col-2 card login">
+		<form>
+			<label class="cardText">Login</label><br><br>
+			<div class="line">
+				<label>Email: </label>
+				<input type="text" name="email" placeholder="Email">
+			</div>
+			<div class="line">
+				<label>Password: </label>
+				<input type="password" name="password" placeholder="Password">
+			</div>
+			<input class="button" type="submit" name="prijava" value="Prijava" />
+		</form>
+	</div>
+	<div class="col-2 card registracija">
+		<form id="registracijaStudent">
+			<label class="cardText">Registracija studenta</label><br><br>
+			<div class="line">
+				<label>Ime i prezime: </label>
+				<input type="text" id="regImePrezime-student" placeholder="Ime i prezime" onblur="ErrorProvider.validateField(this.id, this.value)">
+			</div>
+			<div class="line">
+				<label>Broj indexa:</label>
+				<input type="text" id="index-student" placeholder="Broj Indexa" onblur="ErrorProvider.validateField(this.id, this.value)">
+			</div>
+			<div class="line">
+				<label>Nastavna grupa:</label>
+				<select id="grupa-student" onblur="ErrorProvider.validateField(this.id, this.options[this.selectedIndex].value)">
+	     		<option value="1">Grupa 1</option>
+	      	<option value="2">Grupa 2</option>
+	      	<option value="3">Grupa 3</option>
+	      	<option value="4">Grupa 4</option>
+	      	<option value="5">Grupa 5</option>
+	      	<option value="6">Grupa 6</option>
+	      	<option value="7">Grupa 7</option>
+        </select>
+			</div>
+			<div class="line">
+				<label> Ak. godina: </label>
+				<input type="text" id="akgodina-student" placeholder="Akademska Godina" onblur="ErrorProvider.validateField(this.id, this.value)">
+			</div>
+			<div class="line">
+				<label>Naziv repozitorija:</label>
+				<input type="text" id="nazivRepozitorija-student" placeholder="Naziv Repozitorija" onblur="ErrorProvider.validateField(this.id, this.value)">
+			</div>
+			<div class="line">
+				<label>Bitbucket URL:</label>
+				<input type="text" id="bitbucketURL-student" placeholder="Bitbucket URL" onblur="ErrorProvider.validateField(this.id, this.value)">
+			</div>
+			<div class="line">
+				<label>Bitbucket SSH:</label>
+				<input type="text" id="bitbucketSSH-student" placeholder="Bitbucket SSH" onblur="ErrorProvider.validateField(this.id, this.value)">
+			</div>
+
+			<div class="line">
+				<label>Password: </label>
+				<input type="password" id="regPassword-student" placeholder="Password" onblur="ErrorProvider.validateField(this.id, this.value)">
+			</div>
+			<div class="line">
+				<label>Potvrdite password: </label>
+				<input type="password" id="confirmPassword-student" placeholder="Potvrdite Password"
+					onblur="ErrorProvider.validateConfirmation(this.id, document.getElementById('regPassword-student').value, this.value)">
+			</div>
+			<input class="button" type="submit" id="registracija-Student" value="Potvrdi" />
+			<button class="button" id="regProfesora" type="button" onclick="regProfesor()">Registruj Profesora</button>
+		</form>
+		<form id="registracijaProfesor">
+				<label class="cardText">Registracija profesora</label><br><br>
+				<div class="line">
+					<label>Ime i prezime: </label>
+					<input type="text" id="regImePrezime-profesor" placeholder="Ime i prezime" onblur="ErrorProvider.validateField(this.id, this.value)">
+				</div>
+				<div class="line">
+					<label>Korisničko ime: </label>
+					<input type="text" id="username-profesor" placeholder="Username">
+				</div>
+				<div class="line">
+					<label>Password: </label>
+					<input type="password" id="regPassword-profesor" placeholder="Password" onblur="ErrorProvider.validateField(this.id, this.value)">
+				</div>
+				<div class="line">
+					<label>Potvrdite password: </label>
+					<input type="password" id="confirmPassword-profesor" placeholder="Potvrdite Password"
+						onblur="ErrorProvider.validateConfirmation(this.id, document.getElementById('regPassword-profesor').value, this.value)">
+				</div>
+				<div class="line">
+					<label>Fakultetski email: </label>
+					<input type="text" id="mail-profesor" placeholder="Email" onblur="ErrorProvider.validateField(this.id, this.value)">
+				</div>
+				<div class="line">
+					<label>Max.grupa: </label>
+					<input type="number" id="maxGrupa-profesor" onblur="ErrorProvider.validateField(this.id, this.value)">
+				</div>
+				<div class="line">
+					<label>Regex:</label>
+					<input type="text" id="regex-profesor" placeholder="Naziv Repo regex">
+				</div>
+				<div class="line">
+					<label>Semestar:</label>
+					<input type="text" id="semestar-profesor" placeholder="Semestar" onblur="ErrorProvider.validateField(this.id, this.value)">
+				</div>
+				<div class="line">
+					<label>Ak.godina:</label>
+					<input type="text" id="akgod-profesor" placeholder="Akademska Godina" onblur="ErrorProvider.validateField(this.id, this.value)">
+				</div>
+				<input class="button" type="submit" id="registracija-Profesor" value="Potvrdi" />
+				<button class="button" type="button" id="regStudenta" onclick="regStudent()">Registruj Studenta</button>
+		</form>
+		<div id="errorProvider">
+		</div>
+	</div>
+	<div class="col-4"></div>
+</div>
+</body>
+</html>
