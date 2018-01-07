@@ -1,0 +1,21 @@
+{
+  "name": "wtprojekat17345",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://mmesihovic1@bitbucket.org/mmesihovic1/wtprojekat17345.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/mmesihovic1/wtprojekat17345#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "jquery": "^3.2.1"
+  }
+}

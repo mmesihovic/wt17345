@@ -50,6 +50,18 @@ tr, th, td {
     margin: 5px;
 }
 
+.button1 {
+    width: 100%;
+}
+
+.brSpirale {
+    width: 100%;
+}
+
+.index { 
+    width: 100%;
+}
+
 @media (max-width: 700px){
   [class*="col-"] {
     width: 100% !important;
