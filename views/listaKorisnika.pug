@@ -1,0 +1,14 @@
+div
+    table
+        tbody
+            for user in users
+                tr
+                    td
+                        #{user.KorisnikId}
+                    td #{user.imePrezime}
+                    td
+                        if user.brojIndeksa == null
+                            if user.verified == false
+                                input(type="button",value="Verify", id=user.KorisnikId , onclick="return verify(this);")
+                            else
+                                input(type="button",value="Unverify",id=user.KorisnikId,onclick="return verify(this);")

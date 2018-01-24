@@ -15,7 +15,13 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/mmesihovic1/wtprojekat17345#readme",
   "dependencies": {
+    "bcrypt": "^1.0.3",
     "express": "^4.16.2",
-    "jquery": "^3.2.1"
+    "express-session": "^1.15.6",
+    "htmlencode": "0.0.4",
+    "jquery": "^3.2.1",
+    "mysql2": "^1.5.1",
+    "pug": "^2.0.0-rc.4",
+    "sequelize": "^4.32.1"
   }
 }
