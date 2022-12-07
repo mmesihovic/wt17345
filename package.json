@@ -16,7 +16,7 @@
   "homepage": "https://bitbucket.org/mmesihovic1/wtprojekat17345#readme",
   "dependencies": {
     "bcrypt": "^1.0.3",
-    "express": "^4.16.2",
+    "express": "^4.18.2",
     "express-session": "^1.15.6",
     "htmlencode": "0.0.4",
     "jquery": "^3.2.1",
